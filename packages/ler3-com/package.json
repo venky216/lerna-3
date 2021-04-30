@@ -27,8 +27,8 @@
   "license": "MIT",
   "devDependencies": {
     "@stencil/core": "^1.17.3",
-    "@stencil/react-output-target": "^0.0.9",
     "@stencil/postcss": "^1.0.1",
+    "@stencil/react-output-target": "^0.0.9",
     "@stencil/sass": "^1.3.2",
     "autoprefixer": "^9.8.6"
   }
