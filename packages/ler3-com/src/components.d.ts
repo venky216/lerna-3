@@ -6,50 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AlCard {
-    }
-    interface AlCounter {
-        "max": number;
-        "min": number;
+    interface TnTxt {
     }
 }
 declare global {
-    interface HTMLAlCardElement extends Components.AlCard, HTMLStencilElement {
+    interface HTMLTnTxtElement extends Components.TnTxt, HTMLStencilElement {
     }
-    var HTMLAlCardElement: {
-        prototype: HTMLAlCardElement;
-        new (): HTMLAlCardElement;
-    };
-    interface HTMLAlCounterElement extends Components.AlCounter, HTMLStencilElement {
-    }
-    var HTMLAlCounterElement: {
-        prototype: HTMLAlCounterElement;
-        new (): HTMLAlCounterElement;
+    var HTMLTnTxtElement: {
+        prototype: HTMLTnTxtElement;
+        new (): HTMLTnTxtElement;
     };
     interface HTMLElementTagNameMap {
-        "al-card": HTMLAlCardElement;
-        "al-counter": HTMLAlCounterElement;
+        "tn-txt": HTMLTnTxtElement;
     }
 }
 declare namespace LocalJSX {
-    interface AlCard {
-    }
-    interface AlCounter {
-        "max"?: number;
-        "min"?: number;
-        "onAlChange"?: (event: CustomEvent<number>) => void;
+    interface TnTxt {
     }
     interface IntrinsicElements {
-        "al-card": AlCard;
-        "al-counter": AlCounter;
+        "tn-txt": TnTxt;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "al-card": LocalJSX.AlCard & JSXBase.HTMLAttributes<HTMLAlCardElement>;
-            "al-counter": LocalJSX.AlCounter & JSXBase.HTMLAttributes<HTMLAlCounterElement>;
+            "tn-txt": LocalJSX.TnTxt & JSXBase.HTMLAttributes<HTMLTnTxtElement>;
         }
     }
 }
