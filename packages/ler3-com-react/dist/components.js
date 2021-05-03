@@ -4,5 +4,6 @@
 import { createReactComponent } from './react-component-lib';
 import { applyPolyfills, defineCustomElements } from 'ler3-com/loader';
 applyPolyfills().then(() => defineCustomElements());
+export const TnButton = /*@__PURE__*/ createReactComponent('tn-button');
 export const TnTxt = /*@__PURE__*/ createReactComponent('tn-txt');
 //# sourceMappingURL=components.js.map

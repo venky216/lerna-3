@@ -8,4 +8,5 @@ import type { JSX } from 'ler3-com';
 import { applyPolyfills, defineCustomElements } from 'ler3-com/loader';
 
 applyPolyfills().then(() => defineCustomElements());
+export const TnButton = /*@__PURE__*/createReactComponent<JSX.TnButton, HTMLTnButtonElement>('tn-button');
 export const TnTxt = /*@__PURE__*/createReactComponent<JSX.TnTxt, HTMLTnTxtElement>('tn-txt');

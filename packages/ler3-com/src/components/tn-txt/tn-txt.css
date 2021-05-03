@@ -1,3 +1,13 @@
-:host {
-  display: block;
+.text-input {
+  width: 328px;
+  height: 44px;
+  padding: 14px 16px;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  background: white;
+  border: 1px solid #1eba68;
+  transition: all 0.2s;
+  border-radius: 4px;
+  font-size: 16px;
 }

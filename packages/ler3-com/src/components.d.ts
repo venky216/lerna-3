@@ -6,10 +6,19 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface TnButton {
+        "text": string;
+    }
     interface TnTxt {
     }
 }
 declare global {
+    interface HTMLTnButtonElement extends Components.TnButton, HTMLStencilElement {
+    }
+    var HTMLTnButtonElement: {
+        prototype: HTMLTnButtonElement;
+        new (): HTMLTnButtonElement;
+    };
     interface HTMLTnTxtElement extends Components.TnTxt, HTMLStencilElement {
     }
     var HTMLTnTxtElement: {
@@ -17,13 +26,18 @@ declare global {
         new (): HTMLTnTxtElement;
     };
     interface HTMLElementTagNameMap {
+        "tn-button": HTMLTnButtonElement;
         "tn-txt": HTMLTnTxtElement;
     }
 }
 declare namespace LocalJSX {
+    interface TnButton {
+        "text"?: string;
+    }
     interface TnTxt {
     }
     interface IntrinsicElements {
+        "tn-button": TnButton;
         "tn-txt": TnTxt;
     }
 }
@@ -31,6 +45,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "tn-button": LocalJSX.TnButton & JSXBase.HTMLAttributes<HTMLTnButtonElement>;
             "tn-txt": LocalJSX.TnTxt & JSXBase.HTMLAttributes<HTMLTnTxtElement>;
         }
     }
